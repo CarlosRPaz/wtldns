@@ -1,0 +1,44 @@
+.book {
+  width: 120px;
+  margin: 0 6px 20px 6px;
+}
+
+.book__img {
+  width: auto;
+  height: 186px;
+  border-radius: 3px;
+
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.book__img:hover {
+  transform: scale(1.1);
+}
+
+.book > h4 {
+  font-weight: normal;
+  font-size: 1rem;
+  margin-top: 10px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+@media (min-width: 600px) {
+  .book {
+    width: 180px;
+    margin: 0 20px 40px 20px;
+  }
+  .book__img {
+    height: 280px;
+  }
+  .book > h4 {
+    font-weight: normal;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+}

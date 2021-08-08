@@ -1,0 +1,51 @@
+.quote {
+  background-color: #424242;
+  color: #fcfcfc;
+
+  width: 90%;
+  max-width: 700px;
+  height: auto;
+
+  padding: 30px 30px;
+
+  margin-top: -80px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+
+  text-align: center;
+
+  position: relative;
+  z-index: 10;
+
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.quote__p {
+  font-size: 1rem;
+  line-height: 1.2;
+  color: #fcfcfcc4;
+}
+
+.quote__lead {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 800px) {
+  .quote {
+    padding: 40px 80px 40px 80px;
+  }
+  .quote__p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  .quote__lead {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+}

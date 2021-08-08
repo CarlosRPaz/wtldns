@@ -1,0 +1,29 @@
+.featuredBook {
+  width: auto;
+  background-color: #2e2e2e;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fcfcfc;
+}
+
+.featuredBook__sectionTitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+  border-bottom: solid 1px #fcfcfc;
+  text-align: center;
+  width: 60%;
+  max-width: 280px;
+  margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 10px;
+}
+
+@media (min-width: 800px) {
+  .featuredBook__sectionTitle {
+    font-size: 1.8rem;
+  }
+}

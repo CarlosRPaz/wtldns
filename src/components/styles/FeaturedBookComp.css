@@ -1,0 +1,130 @@
+.featuredBookComp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 60px;
+  max-width: 480px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.featuredBookComp__bookCover {
+  height: 310px;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 3px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.featuredBookComp__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.featuredBookComp__info > p {
+  line-height: 1.6;
+  margin-top: 20px;
+
+  text-align: justify;
+  text-justify: inter-word;
+
+  display: none;
+}
+
+.featuredBookComp__title {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.featuredBookComp__booksSold {
+  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+}
+.featuredBookComp__booksSold-iconCont {
+  margin-right: 12px;
+}
+.featuredBookComp__booksSold-icon {
+  width: 40px !important;
+  height: 40px !important;
+}
+.featuredBookComp__booksSold-info {
+  display: flex;
+  flex-direction: column;
+}
+.featuredBookComp__booksSold-info > div {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+
+  text-align: left;
+}
+.featuredBookComp__booksSold-info > p {
+  font-size: 0.8rem;
+}
+
+.featuredBookComp__buyButton {
+  background-color: #b69774; /*#fc4c4f;*/
+  color: #fcfcfc;
+
+  letter-spacing: 1px;
+  text-align: center;
+
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 50%;
+  max-width: 180px;
+  margin: 0px auto 0px auto;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 20px;
+
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.featuredBookComp__buyButton:hover {
+  transform: scale(1.1);
+}
+.featuredBookComp__buyButton:active {
+  transform: scale(1.05);
+}
+
+@media (min-width: 800px) {
+  .featuredBookComp {
+    flex-direction: row;
+    max-width: 760px;
+  }
+  .featuredBookComp__bookCover {
+    height: 400px;
+    min-width: 260px;
+  }
+  .featuredBookComp__info {
+    padding-left: 30px;
+    justify-content: flex-start;
+  }
+  .featuredBookComp__title {
+    text-align: left;
+    padding: 0;
+    margin-top: 10px;
+    font-size: 2rem;
+  }
+  .featuredBookComp__booksSold {
+    margin-left: 0;
+    margin-top: 0px;
+  }
+  .featuredBookComp__buyButton {
+    margin: 20px 0 0 0;
+  }
+}

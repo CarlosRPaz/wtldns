@@ -1,0 +1,47 @@
+.bookStoreScreen {
+  width: auto;
+  min-height: 72%;
+  background-color: #2e2e2e;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: flex-start;
+  color: #fcfcfc;
+}
+
+.bookStoreScreen__sectionTitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+  border-bottom: solid 1px #fcfcfc;
+  text-align: center;
+  width: 60%;
+  max-width: 280px;
+
+  margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 10px;
+}
+
+.bookStoreScreen__booksCont {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 800px) {
+  .bookStoreScreen__sectionTitle {
+    font-size: 1.8rem;
+  }
+}
+@media (min-height: 1200px) {
+  .bookStoreScreen {
+    min-height: 80%;
+  }
+}
