@@ -1,9 +1,36 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./styles/AboutScreen.css";
 import JSM from "./../img/author.jpg";
 import Footer from "../components/Footer";
 
+import sanityClient from "../client.js";
+
 function AboutScreen() {
+  const [authorData, setAuthorData] = useState(null);
+
+  useEffect(() => {
+    sanityClient
+      .fetch(
+        `*[_type == "author"]{
+      title,
+      bio, 
+      image{
+        asset->{
+          _id,
+          url
+        },
+        alt
+      }
+    }`
+      )
+      .then(data => setAuthorData(data))
+      .catch(console.error);
+  }, []);
+
+  if (!authorData) return <div>Loading...</div>;
+
+  if (authorData) console.log(authorData[0]);
+
   return (
     <div className="aboutScreen">
       <div className="aboutScreen__sectionTitle">About the Author</div>
@@ -13,21 +40,12 @@ function AboutScreen() {
         style={{
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
-          backgroundImage: `url(${JSM})`,
+          backgroundImage: `url(${authorData[0].image.asset.url})`,
           backgroundPosition: "center center"
         }}
       />
 
-      <p>
-        <span>Jonathan Santa Maria</span> was a professional mixed martial
-        artist. He has fought for organizations like Bellator MMA and Combate
-        Americas. In his spare time, Jonathan works in the mental health field,
-        assisting those in need. Jonathan lived in the house on Danby Street,
-        where this book was inspired. Jonathan has found a new passion for
-        writing, and he is overly excited to bring this book and his next book
-        of horror poetry to the world. So, strap up your seat belt and enjoy the
-        journey with the newly found writer, Johnny the Tsunami.
-      </p>
+      <p>{authorData[0].bio[0].children[0].text}</p>
     </div>
   );
 }

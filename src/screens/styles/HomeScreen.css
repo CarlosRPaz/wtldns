@@ -1,3 +1,30 @@
 .homeScreen {
   background-color: #2e2e2e;
 }
+
+.youtube-embed-cont {
+  margin: 0 auto 70px auto;
+  padding: 0 10px 0 10px;
+
+  width: 310px;
+  height: 174px;
+}
+
+.responsive-iframe {
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 400px) {
+  .youtube-embed-cont {
+    width: 390px;
+    height: 219px;
+  }
+}
+
+@media (min-width: 800px) {
+  .youtube-embed-cont {
+    width: 750px;
+    height: 422px;
+  }
+}

@@ -1,0 +1,14 @@
+.fanImage {
+  background-color: lightpink;
+  flex-grow: 1;
+  width: 40%;
+  height: 200px;
+  margin: 2px;
+}
+
+@media (min-width: 800px) {
+  .fanImage {
+    height: 300px;
+    margin: 6px;
+  }
+}
