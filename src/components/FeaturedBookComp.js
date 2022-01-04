@@ -1,9 +1,14 @@
 import React from "react";
 import "./styles/FeaturedBookComp.css";
 import MenuBookIcon from "@material-ui/icons/MenuBook";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 
-function FeaturedBookComp({ featuredBook, onAddToCart }) {
+function FeaturedBookComp({featBookData, featuredBook, onAddToCart}) {
+
+  if(!featBookData) {
+    return "Loading...";
+  }
+
   return (
     <div className="featuredBookComp">
       <div
@@ -12,7 +17,7 @@ function FeaturedBookComp({ featuredBook, onAddToCart }) {
         style={{
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
-          backgroundImage: `url(${featuredBook.media.source})`,
+          backgroundImage: `url(${featBookData.mainImage.asset.url})`,
           backgroundPosition: "center top"
         }}
       />
@@ -22,14 +27,13 @@ function FeaturedBookComp({ featuredBook, onAddToCart }) {
             <MenuBookIcon className="featuredBookComp__booksSold-icon" />
           </div>
           <div className="featuredBookComp__booksSold-info">
-            <div>{featuredBook.inventory.available}</div>
+            <div>{featBookData.copiesSold}</div>
             <p>copies sold</p>
           </div>
         </div>
-        <div className="featuredBookComp__title">{featuredBook.name}</div>
-        <p dangerouslySetInnerHTML={{ __html: featuredBook.description }} />
+        <div className="featuredBookComp__title">{featBookData.bookTitle}</div>
         <a
-          href="https://www.amazon.com/When-Light-Does-Not-Shine-ebook/dp/B09BG7W8WK"
+          href={featBookData.amazonURL}
           className="featuredBookComp__buyButton"
         >
           Buy Now

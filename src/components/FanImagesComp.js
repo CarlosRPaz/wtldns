@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, {useState, useEffect} from "react";
 import "./styles/FanImagesComp.css";
 import FanImage from "../components/FanImage";
 
@@ -30,7 +30,7 @@ function FanImagesComp() {
     <div className="fanImagesComp">
       {fanData &&
         fanData.map((fan, index) => (
-          <FanImage image={fan.mainImage.asset.url} />
+          <FanImage image={fan.mainImage.asset.url} key={index} />
         ))}
     </div>
   );

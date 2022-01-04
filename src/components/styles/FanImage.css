@@ -2,13 +2,23 @@
   background-color: lightpink;
   flex-grow: 1;
   width: 40%;
-  height: 200px;
+  height: 220px;
   margin: 2px;
 }
 
+@media (min-width: 400px) {
+  .fanImage {
+    height: 240px;
+  }
+}
+@media (min-width: 470px) {
+  .fanImage {
+    height: 280px;
+  }
+}
 @media (min-width: 800px) {
   .fanImage {
-    height: 300px;
+    height: 400px;
     margin: 6px;
   }
 }

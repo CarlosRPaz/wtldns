@@ -9,16 +9,6 @@ export default {
       type: "string"
     },
     {
-      name: "slug",
-      title: "Slug",
-      type: "slug",
-      options: {
-        source: "title",
-        maxLength: 96
-      }
-    },
-
-    {
       name: "mainImage",
       title: "Main image",
       type: "image",
@@ -30,12 +20,11 @@ export default {
 
   preview: {
     select: {
-      title: "title",
-      author: "author.name",
+      title: "name",
       media: "mainImage"
     },
     prepare(selection) {
-      const { author } = selection;
+      const {author} = selection;
       return Object.assign({}, selection, {
         subtitle: author && `by ${author}`
       });
